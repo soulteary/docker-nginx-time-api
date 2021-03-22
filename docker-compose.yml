@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  ngx-time-api:
+    image: nginx-time-api:1.19.8-alpine
+    ports:
+      - 8080:80
+    volumes:
+      # 在 Linux 环境中需要使用
+      # - /etc/localtime:/etc/localtime:ro
+      # - /etc/timezone:/etc/timezone:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf

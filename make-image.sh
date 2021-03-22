@@ -1,0 +1,1 @@
+docker build -t nginx-time-api:1.19.8-alpine .
